@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Literasi Akademik Berbantuan AI</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h2 {
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            margin-top: 25px;
+            color: #2980b9;
+        }
+        
+        /* Section Styles */
+        .intro {
+            background-color: #eaf2f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .benefits {
+            background-color: #e8f8f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .benefits-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #d5f5e3;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+        }
+        
+        .why-join {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .problem-list {
+            counter-reset: problem-counter;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .problem-list li {
+            counter-increment: problem-counter;
+            padding: 15px 0;
+            border-bottom: 1px solid #fdebd0;
+        }
+        
+        .problem-list li:before {
+            content: counter(problem-counter);
+            color: #e67e22;
+            font-weight: bold;
+            display: inline-block;
+            width: 2em;
+        }
+        
+        .ai-section {
+            background-color: #f5eef8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .practical-info {
+            background-color: #eaf2f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .difference {
+            background-color: #e8f8f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .session {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .session h3 {
+            color: #3498db;
+        }
+        
+        .faq {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .testimonial {
+            background-color: #eaf2f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-style: italic;
+            border-left: 4px solid #3498db;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .cta {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    .intro p {
+    margin-bottom: 1.2em;  /* Memberi jarak 1.2x ukuran font */
+}
+
+/* Atau jika ingin lebih spesifik hanya untuk paragraf kedua */
+.intro p + p {
+    margin-top: 20px;  /* Jarak 20px di atas paragraf kedua */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Workshop Literasi Akademik Berbantuan AI</h1>
+        <div class="intro">
+            <p><strong>Tingkatkan keterampilan membaca dan analisis teks akademis Anda dengan bantuan AI.</strong> 
+            <p>Workshop intensif 5 pertemuan ini memadukan teknologi kecerdasan buatan dan pendampingan mentor untuk membantu mahasiswa pascasarjana memahami teks teoretis kompleks dengan lebih efektif, efisien, dan mendalam.</p>
+        </div>
+    </header>
+    
+    <section class="benefits">
+        <h2>Apa yang Akan Anda Dapatkan?</h2>
+        <ul class="benefits-list">
+            <li><strong>Penghematan Waktu</strong> - Kurangi waktu membaca hingga 50% dengan teknik pemindaian AI sambil tetap memahami inti teks akademis</li>
+            <li><strong>Pemahaman Lebih Mendalam</strong> - Identifikasi konsep kunci dan struktur argumentasi dalam teks teori yang kompleks dengan lebih mudah</li>
+            <li><strong>Keterampilan Konkret</strong> - Kuasai teknik prompt AI yang efektif untuk mengekstrak, menganalisis, dan mensintesis teks akademis</li>
+            <li><strong>Protokol Personal</strong> - Dapatkan strategi membaca akademis yang disesuaikan dengan kebutuhan penelitian Anda</li>
+            <li><strong>Jaringan Akademis</strong> - Terhubung dengan komunitas peneliti yang memanfaatkan teknologi AI dalam studi mereka</li>
+            <li><strong>Dukungan Berkelanjutan</strong> - Akses ke grup diskusi pascaworkshop selama 1 bulan untuk konsultasi lanjutan</li>
+        </ul>
+    </section>
+    
+    <section class="why-join">
+        <h2>Mengapa Harus Ikut Workshop ini?</h2>
+        <p>Mahasiswa pascasarjana ilmu sosial dan humaniora sering menghadapi kesulitan saat berhadapan dengan teks-teks teoretis:</p>
+        <ul class="problem-list">
+            <li><strong>Sulit Memahami Teks Ilmiah</strong> - Banyak mahasiswa kesulitan mengenali ide utama dan menemukan teori yang relevan dengan penelitian mereka.</li>
+            <li><strong>Terlalu Banyak Bacaan</strong> - Setiap semester, mahasiswa harus membaca ratusan ribu kata hanya untuk satu mata kuliah.</li>
+            <li><strong>Konsep yang Rumit</strong> - Banyak istilah dan konsep ilmu sosial yang masih asing, sehingga butuh waktu ekstra untuk memahaminya.</li>
+            <li><strong>Kesulitan Menghubungkan Ide</strong> - Mahasiswa sering kesulitan mengaitkan berbagai teori, yang akhirnya melemahkan kualitas analisis dalam penelitian.</li>
+        </ul>
+    </section>
+    
+    <section class="ai-section">
+        <h2>Bagaimana dengan AI?</h2>
+        <p>Teknologi AI seperti ChatGPT bisa membantu mengatasi tantangan ini, tapi masih ada kendala:</p>
+        <ul class="problem-list">
+            <li><strong>Penggunaan yang Kurang Tepat</strong> - Banyak mahasiswa hanya menggunakan AI untuk membuat tugas instan, bukan sebagai alat bantu berpikir.</li>
+            <li><strong>Belum Pintar Bertanya</strong> - Mahasiswa belum menguasai cara bertanya yang efektif kepada AI agar mendapatkan jawaban yang benar-benar membantu.</li>
+            <li><strong>Masih Butuh Bimbingan</strong> - Meski dengan bantuan AI, mahasiswa tetap memerlukan panduan dari pengajar untuk memahami konsep dengan benar.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>Apa yang Workshop ini Tawarkan?</h2>
+        <p>Workshop ini menggabungkan kekuatan AI dengan bimbingan langsung dari mentor. Fokus utamanya adalah membantu Anda mengembangkan kemampuan belajar mandiri yang efektif.</p>
+    </section>
+    
+    <section class="practical-info">
+        <h2>Informasi Praktis Workshop</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>⏱️ Durasi & Jadwal</h3>
+                <ul>
+                    <li><strong>Total Durasi</strong>: 10 jam pembelajaran (5 pertemuan × 120 menit)</li>
+                    <li><strong>Jadwal</strong>: [Masukkan jadwal spesifik - hari dan waktu]</li>
+                    <li><strong>Format</strong>: Pertemuan tatap muka/daring [Sesuaikan]</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>💻 Persyaratan Peserta</h3>
+                <ul>
+                    <li>Mahasiswa pascasarjana atau S-1 tingkat akhir</li>
+                    <li>Memiliki minimal 1 teks akademis (buku/artikel ilmiah) dalam format PDF</li>
+                    <li>Laptop/komputer dengan koneksi internet stabil</li>
+                    <li>Familiar dengan penggunaan AI berbasis GPT</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>💰 Investasi</h3>
+                <ul>
+                    <li><strong>Biaya</strong>: Rp50.000 per pertemuan (Total: Rp250.000)</li>
+                    <li><strong>Metode Pembayaran</strong>: [Masukkan metode pembayaran]</li>
+                    <li><strong>Early Bird</strong>: [Jika ada]</li>
+                    <li>[Opsi pembayaran lain jika tersedia]</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>📝 Pendaftaran</h3>
+                <ul>
+                    <li><strong>Deadline</strong>: [Tanggal penutupan pendaftaran]</li>
+                    <li><strong>Kapasitas</strong>: Terbatas [Jumlah peserta maksimal]</li>
+                    <li><strong>Cara Daftar</strong>: [Link/kontak pendaftaran]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="difference">
+        <h2>Apa yang Membuat Workshop Ini Berbeda?</h2>
+        
+        <h3>🤝 Pembelajaran Kolaboratif</h3>
+        <p>Workshop ini dirancang seperti <strong>kelompok belajar kolaboratif</strong> di mana peserta dan mentor bersama-sama mengeksplorasi teks akademis. Tidak seperti workshop konvensional yang hanya menawarkan materi umum, workshop ini memberikan pendampingan langsung untuk teks pilihan Anda.</p>
+        
+        <h3>👨‍🏫 Mentor Berpengalaman</h3>
+        <p>Difasilitasi oleh mentor dengan:</p>
+        <ul>
+            <li><strong>10+ tahun</strong> pengalaman sebagai penerjemah dan editor buku ilmu sosial dan filsafat</li>
+            <li><strong>Latar belakang</strong> studi filsafat dan kajian budaya</li>
+            <li><strong>Pendidikan</strong> pesantren yang memberikan pemahaman mendalam tentang tradisi tekstual</li>
+            <li><strong>Pengalaman</strong> sebagai peneliti dalam studi kebijakan sosial kemasyarakatan</li>
+        </ul>
+        
+        <h3>🤖 Pemanfaatan AI yang Optimal</h3>
+        <p>Menggunakan pendekatan AI yang tepat:</p>
+        <ul>
+            <li>Fokus pada model AI berbasis GPT dengan fitur reasoning</li>
+            <li>Teknik prompt yang disesuaikan untuk analisis tekstual akademis</li>
+            <li>Strategi verifikasi untuk memastikan keakuratan hasil</li>
+        </ul>
+        
+        <h3>📚 Fokus pada Teks Pilihan Anda</h3>
+        <p>Setiap peserta bekerja dengan teks akademis pilihan sendiri, memastikan relevansi langsung dengan kebutuhan studi atau penelitian mereka.</p>
+    </section>
+    
+    <section>
+        <h2>Bagaimana Kegiatan Workshop ini?</h2>
+        
+        <div class="session">
+            <h3>📅 Pertemuan 1: Inisiasi dan Persiapan (2 jam)</h3>
+            <p><strong>Apa yang akan Anda pelajari:</strong></p>
+            <ul>
+                <li>Memahami cara kerja AI untuk membaca teks akademis</li>
+                <li>Mengidentifikasi kebutuhan belajar spesifik Anda</li>
+            </ul>
+            
+            <p><strong>Agenda:</strong></p>
+            <ol>
+                <li>Pengenalan cara membaca akademis dengan AI (30 menit)
+                    <ul>
+                        <li>Prinsip dasar pendekatan</li>
+                        <li>Etika penggunaan AI</li>
+                        <li>Apa yang bisa diharapkan dari workshop</li>
+                    </ul>
+                </li>
+                <li>Pemetaan Kebutuhan Individual (90 menit)
+                    <ul>
+                        <li>Presentasi singkat teks akademis pilihan Anda</li>
+                        <li>Diskusi tentang karakteristik teks</li>
+                        <li>Identifikasi tantangan spesifik dalam memahami teks</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <p><strong>Yang Anda dapatkan:</strong></p>
+            <ul>
+                <li>Kontrak belajar personal</li>
+                <li>Peta kebutuhan individual</li>
+                <li>Rencana pendekatan untuk teks Anda</li>
+            </ul>
+        </div>
+        
+        <!-- Repeat similar structure for other sessions -->
+        <div class="session">
+            <h3>📅 Pertemuan 2: Pemahaman Struktur Teks dengan AI (2 jam)</h3>
+            <!-- Content for session 2 -->
+        </div>
+        
+        <div class="session">
+            <h3>📅 Pertemuan 3: Pembacaan Mendalam (2 jam)</h3>
+            <!-- Content for session 3 -->
+        </div>
+        
+        <div class="session">
+            <h3>📅 Pertemuan 4: Sintesis Konseptual (2 jam)</h3>
+            <!-- Content for session 4 -->
+        </div>
+        
+        <div class="session">
+            <h3>📅 Pertemuan 5: Evaluasi dan Rencana Ke Depan (2 jam)</h3>
+            <!-- Content for session 5 -->
+        </div>
+    </section>
+    
+    <section class="faq">
+        <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+        
+        <h3>Q: Apakah saya harus sudah mahir menggunakan AI?</h3>
+        <p>A: Tidak. Workshop ini dirancang untuk semua tingkat keahlian. Yang penting adalah kesediaan Anda untuk belajar.</p>
+        
+        <h3>Q: Bagaimana jika saya belum memiliki teks akademis spesifik?</h3>
+        <p>A: Kami dapat membantu merekomendasikan teks sesuai bidang studi Anda, atau Anda dapat menggunakan teks dari mata kuliah yang sedang Anda ambil.</p>
+        
+        <h3>Q: Apakah ada sesi privat tersedia?</h3>
+        <p>A: Ya, tersedia sesi privat tambahan dengan biaya terpisah untuk kebutuhan khusus. Silakan hubungi kami untuk informasi lebih lanjut.</p>
+        
+        <h3>Q: Apakah workshop ini cocok untuk semua bidang studi?</h3>
+        <p>A: Workshop ini terutama dirancang untuk ilmu sosial dan humaniora, tetapi prinsip-prinsipnya dapat diaplikasikan pada berbagai bidang studi.</p>
+    </section>
+    
+    <section>
+        <h2>Testimonial Peserta</h2>
+        
+        <div class="testimonial">
+            <p>"Workshop ini benar-benar mengubah cara saya membaca teks akademis. Sekarang saya bisa memahami teks yang sebelumnya tampak mustahil untuk dipahami."</p>
+            <p class="testimonial-author">- Amanda, Mahasiswa S2 Antropologi</p>
+        </div>
+        
+        <div class="testimonial">
+            <p>"Penggunaan AI untuk memahami teks adalah game changer. Mentor memberikan pendampingan yang luar biasa dalam proses belajar."</p>
+            <p class="testimonial-author">- Budi, Mahasiswa S2 Kajian Agama</p>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Hubungi Kami</h2>
+        <p>Untuk informasi lebih lanjut atau pendaftaran, silakan hubungi:</p>
+        <p>📱 WhatsApp: [Nomor WhatsApp]<br>
+        📧 Email: [Alamat Email]<br>
+        🌐 Website: [Website URL]</p>
+    </section>
+    
+    <div class="cta">
+        <h2>Daftar Sekarang – Tempat Terbatas!</h2>
+        <a href="#" class="cta-button">REGISTRASI WORKSHOP</a>
+    </div>
+</body>
+</html>
