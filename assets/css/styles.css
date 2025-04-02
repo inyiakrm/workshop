@@ -1,1 +1,235 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --accent-color: #e74c3c;
+  --light-bg: #f9f9f9;
+  --dark-text: #2c3e50;
+  --light-text: #7f8c8d;
+  --success-color: #27ae60;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+  color: var(--dark-text);
+  margin-top: 1.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* ===== SECTION STYLES ===== */
+.intro {
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.intro p {
+  margin-bottom: 1.2em;
+  line-height: 1.8;
+}
+
+.benefits {
+  background-color: rgba(39, 174, 96, 0.1);
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(39, 174, 96, 0.3);
+  position: relative;
+  padding-left: 30px;
+}
+
+.benefits-list li:before {
+  content: "✓";
+  color: var(--success-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* ===== CARD STYLES ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.info-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== SESSION STYLES ===== */
+.session {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 25px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--primary-color);
+}
+
+.session h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial {
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 25px 0;
+  font-style: italic;
+  border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-author {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 15px;
+  color: var(--secondary-color);
+}
+
+/* ===== BUTTONS & LINKS ===== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* ===== FAQ STYLES ===== */
+.faq {
+  margin: 30px 0;
+}
+
+.faq h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .intro, .benefits, .session {
+    padding: 20px;
+  }
+}
+
+/* ===== MENTOR CV PAGE SPECIFIC ===== */
+.cv-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.cv-section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.back-button {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: var(--light-text);
+  color: white;
+  border-radius: 5px;
+}
